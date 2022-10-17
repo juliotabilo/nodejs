@@ -89,7 +89,7 @@ function finTiempoEscritura(){
 
 // Obtener mensajes para mostrarlos en el chat 
 function obtenerMensajes(){
-    $.getJSON("http://localhost:3000/mensajes/", (datos)=>{ 
+    $.getJSON("https://cluttered-rake-production.up.railway.app/mensajes/", (datos)=>{ 
         var mensaje = [];
         $.each(datos, (key, val) => {
             $.each(val, (key, val) => {
@@ -131,7 +131,7 @@ function enviarMensaje() {
 }
 
 function obtenerUsuariosConectados(){
-    $.getJSON("http://localhost:3000/usuarios/", (datos)=>{ 
+    $.getJSON("https://cluttered-rake-production.up.railway.app/usuarios/", (datos)=>{ 
         var usuarios_mostrar = "";
         $.each(datos, (key, val) => {
             usuarios_mostrar= usuarios_mostrar+"- "+val+". \n";
