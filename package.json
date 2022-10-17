@@ -1,0 +1,26 @@
+{
+  "name": "tarea5",
+  "version": "1.0.0",
+  "description": "Tarea N° 5 Correspondiente a Curso NodeJS, donde se debe crear un CHAT usando NodeJS, Express y SocketIO",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "socketio",
+    "express"
+  ],
+  "author": "Julio Antonio Tabilo Riquelme",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.1.1",
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.1",
+    "jquery": "^3.6.1",
+    "node-notifier": "^10.0.1",
+    "request": "^2.88.2",
+    "socket.io": "^4.5.2"
+  }
+}

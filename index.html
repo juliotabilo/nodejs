@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />    
+  
+    <title>Chat con Express & Socket.IO - JATR</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <style type="text/css">
+      .escribiendo {
+        font-size: 13px;
+        color: #6258ea;
+      }
+
+      .contenedor {
+        margin-top: 200px;        
+      }
+
+      .ventanachat {
+        overflow-y: scroll;
+        height: 300px;
+        scroll-behavior: auto;
+      }
+
+      .txt_negrita {
+        font-weight: bold;
+      }
+    </style> 
+
+  </head>
+
+  <body>
+    <header>
+      <h3 align="center">Tarea Modulo N° 5 Curso NodeJS - Chat con Express & Socket.IO</h3>
+      <input type="button" class="btn btn-primary" id="obtener_conectados" value="Ver Usuarios Conectados" onclick="obtenerUsuariosConectados();">     
+    </header>
+    
+    <main role="main" class="container contenedor">
+
+        
+      <div class="container col-md-12"> 
+          
+        <div class="input-group mb-3">
+            
+          <div class="input-group" id="nombreusuario">
+            <label class="txt_negrita">Nombre de Usuario:</label>
+          </div>
+
+          <input type="text" class="form-control" id="item" placeholder="Ponga aqui su NickName para el Chat" maxlength="100" onkeypress="return check(event)"> 
+
+        </div>
+
+        <input type="button" class="btn btn-primary" id="enviar" value="Ingresar al Chat" onclick="configurarNombreUsuario();">     
+
+      </div>
+
+      <!-- Mostrar los Mensajes del Chat -->
+      <div class="ventanachat container col-md-12 mt-5"></div>
+
+      <!-- Mostrar mensaje "Usuario esta escribiendo..." -->
+      <div class="escribiendo container col-md-12 mb-1"></div>  
+
+    </main>
+
+
+    <footer class="text-muted mt-3 mb-3">
+        <div align="center">
+          Desarrollado por Julio Antonio Tabilo Riquelme
+      </div> 
+    </footer>
+
+    <!-- Instancio a Socket IO y a mi archivo chat.js -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+    <script>
+      // Función que valida caracteres permitidos para el Nombre de Usuario y Mensajes del Chat (Solo Letras Mayusculas, Minusculas y Numeros)
+        function check(e) {
+        tecla = (document.all) ? e.keyCode : e.which;
+
+        //Tecla de retroceso
+        if (tecla == 8) {
+            return true;
+        }
+        patron = /[A-Za-z0-9]/;
+        tecla_final = String.fromCharCode(tecla);
+        return patron.test(tecla_final);
+    }
+    </script>
+    
+  </body>
+  
+</html> 
