@@ -9,7 +9,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 const notifier = require('node-notifier');
 
-const {PORT = 3000} = process.env
+//const {PORT = 3000} = process.env
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
@@ -80,5 +80,5 @@ app.get('/', function(req, res){
  });
 
  http.listen(3000, function(){
-    console.log('Servidor Iniciado en el port '+PORT);
+    console.log('Servidor Iniciado en el port 3000');
  });
