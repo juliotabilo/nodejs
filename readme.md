@@ -33,6 +33,6 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios. Actualización_
 
 * **Julio Tabilo Riquelme** - Desarrollador, Testing, Documentador, Capacitador y Encargado de Infraestructura y Soporte 24/7 x 365
